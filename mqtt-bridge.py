@@ -34,7 +34,6 @@ class MyClient(mqtt.Client):
             self._last_data = now
             send_data(self)
 
-        print('return')
         return res
 
 def send_data(client : mqtt.Client):
@@ -87,7 +86,6 @@ def main():
     else:
         logging.basicConfig(level=logging.INFO)
 
-
     log.info('opening DMM')
     dmm = UT61EPLUS()
     dmm_name = dmm.getName()
@@ -103,10 +101,10 @@ def main():
 
     while True:
         try:
-            mqtt_client.loop_forever()
+            mqtt_client.loop(cmdline.interval)
         except Exception:
             log.exception('error in mqtt loop')
-            time.sleep(10)           
+            time.sleep(10)
 
 if __name__ == '__main__':
     main()
