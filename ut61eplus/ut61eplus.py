@@ -287,8 +287,8 @@ class Measurement:
 
 class UT61EPLUS:
 
-    CP2110_VID = 0x10c4
-    CP2110_PID = 0xEA80
+    CP2110_VID = 0x1A86
+    CP2110_PID = 0xE429
 
     _SEQUENCE_GET_NAME = bytes.fromhex('AB CD 03 5F 01 DA')
     _SEQUENCE_SEND_DATA = bytes.fromhex('AB CD 03 5E 01 D9')
