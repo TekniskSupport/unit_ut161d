@@ -1,4 +1,5 @@
-# unit_ut61eplus
+# unit_ut161D
+
 Access digtal multimeter UNI-T UT61E+ from Python via CP2110 based USB connection
 
 It should work also for other models: 
